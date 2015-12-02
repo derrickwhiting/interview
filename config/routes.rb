@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+  get '/about', to: 'static_pages#about', as: 'about'
+
+  root 'static_pages#home'
+
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
